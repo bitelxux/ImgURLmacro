@@ -1,6 +1,6 @@
 """
 Img URL macro
-Bitelxux 2017
+Bitelxux 2016
 """
 
 from genshi.builder import tag
