@@ -4,9 +4,6 @@ from genshi.builder import tag
 from trac.util.translation import cleandoc_
 from trac.wiki.macros import WikiMacroBase
 from trac.wiki.api import parse_args
-import requests
-import json
-import random
 
 
 class ImgURLMacro(WikiMacroBase):
@@ -20,8 +17,7 @@ class ImgURLMacro(WikiMacroBase):
     def expand_macro(self, formatter, name, args):
         """Returns an image that will be displayed in the Wiki content.
 
-        `name` is the actual name of the macro (no surprise, here it'll be
-        `'HelloWorld'`),
+        `name` is the actual name of the macro,
         `args` is the text enclosed in parenthesis at the call of the
           macro.
         """
@@ -36,6 +32,3 @@ class ImgURLMacro(WikiMacroBase):
         return tag.image(src=img,
                          width=params['width'],
                          eight=params['eight'])
-
-    # Note that there's no need to HTML escape the returned data,
-    # as the template engine (Genshi) will do it for us.
