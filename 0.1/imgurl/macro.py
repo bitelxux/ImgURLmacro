@@ -15,6 +15,12 @@ class ImgURLMacro(WikiMacroBase):
 
     [[ImgURL(url[, width=<width>, height=<height>, align=left|center|right])]]
 
+    Example
+    -------
+
+    .. code::
+       [[ImgURL(https://s6.postimg.org/bbx4clrsx/batteries_included.png, width=50%, align=center)]]
+
     """)
 
     def expand_macro(self, formatter, name, args):
