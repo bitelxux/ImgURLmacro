@@ -31,7 +31,11 @@ class ImgURLMacro(WikiMacroBase):
         img = args_list[0]
         params['eight'] = args_dict.get('eight', '')
         params['width'] = args_dict.get('width', '')
+        params['align'] = args_dict.get('align', '')
 
-        return tag.image(src=img,
-                         width=params['width'],
-                         eight=params['eight'])
+        return tag.p(tag.image(src=img,
+                               width=params['width'],
+                               eight=params['eight'],
+                               align=params['align']
+                              ),
+                     style="text-align:%s;" % params['align'])
