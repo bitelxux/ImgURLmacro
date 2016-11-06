@@ -1,4 +1,7 @@
-"""Img URL macro"""
+"""
+Img URL macro
+Bitelxux 2017
+"""
 
 from genshi.builder import tag
 from trac.util.translation import cleandoc_
