@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+ImgURLMacro.egg-info/PKG-INFO
+ImgURLMacro.egg-info/SOURCES.txt
+ImgURLMacro.egg-info/dependency_links.txt
+ImgURLMacro.egg-info/entry_points.txt
+ImgURLMacro.egg-info/top_level.txt
+imgurl/__init__.py
+imgurl/macro.py

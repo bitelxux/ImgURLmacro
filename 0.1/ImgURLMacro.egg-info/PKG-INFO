@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: ImgURLMacro
+Version: 0.1
+Summary: Inline an image from an URL
+Home-page: UNKNOWN
+Author: Bitelxux
+Author-email: bitelxux@gmail.com
+License: GPL
+Description: Inline an image from an URL
+                             
+Keywords: trac plugin image url
+Platform: UNKNOWN
