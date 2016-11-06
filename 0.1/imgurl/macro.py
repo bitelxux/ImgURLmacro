@@ -13,7 +13,7 @@ class ImgURLMacro(WikiMacroBase):
     _description = cleandoc_(
     """Image from URL macro.
 
-    [[ImgURL(url[, width=<width>, height=<height>])]]
+    [[ImgURL(url[, width=<width>, height=<height>, align=left|center|right])]]
 
     """)
 
