@@ -34,14 +34,15 @@ class ImgURLMacro(WikiMacroBase):
         params = {}
         args_list, args_dict = parse_args(args)
 
-        img = args_list[0]
+        img_url = args_list[0]
         params['eight'] = args_dict.get('eight', '')
         params['width'] = args_dict.get('width', '')
         params['align'] = args_dict.get('align', '')
 
-        return tag.p(tag.image(src=img,
+        image = tag.image(src=img_url,
                                width=params['width'],
                                eight=params['eight'],
                                align=params['align']
-                              ),
-                     style="text-align:%s;" % params['align'])
+                              )
+        link = tag.a(image, href=img_url)
+        return tag.p(link, style="text-align:%s;" % params['align'])
