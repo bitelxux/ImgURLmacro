@@ -37,13 +37,12 @@ class ImgURLMacro(WikiMacroBase):
         img_url = args_list[0]
         params['eight'] = args_dict.get('eight', '')
         params['width'] = args_dict.get('width', '')
-        if args_dict.get('align', '') == 'center':
-            params['margin'] = 'auto'
-        else:
-            params['align'] = args_dict.get('align', 'left')
+        params['align'] = args_dict.get('align', '')
 
-        image = tag.image(src=img_url, **params)
-
+        image = tag.image(src=img_url,
+                               width=params['width'],
+                               eight=params['eight'],
+                               align=params['align']
+                              )
         link = tag.a(image, href=img_url)
-        #return tag.p(link, style="text-align:%s;" % params['align'])
-        return tag.p(link, align="center")
+        return tag.p(link, style="text-align:%s;" % params['align'])
