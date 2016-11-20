@@ -44,5 +44,5 @@ class ImgURLMacro(WikiMacroBase):
                                eight=params['eight'],
                                align=params['align']
                               )
-        link = tag.a(image, href=img_url)
+        link = tag.a(image, href=img_url, style="cursor:pointer; cursor:hand;")
         return tag.p(link, style="text-align:%s;" % params['align'])
