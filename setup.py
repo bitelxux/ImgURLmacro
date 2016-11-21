@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='ImgURLMacro',
-    version='0.21',
+    version='0.22',
     packages=['imgurl'],
     author="Bitelxux",
     maintainer="Bitelxux",
